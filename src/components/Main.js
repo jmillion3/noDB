@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import Editor from './Editor.js'
 import Form from './Form.js';
 
 class Main extends Component {
@@ -32,9 +33,34 @@ class Main extends Component {
         }).catch(err => console.log(err))
     }
 
+    updateChild = id => {
+        axios.put(`/api/children/${id}`)
+        .then(res => {
+            this.setState({
+                children: res.data
+            })
+        }).catch(err => console.log(err))
+    }
+
+    deleteChild = id => {
+        axios.delete(`/api/children/${id}`)
+        .then(res => {
+            this.setState({
+                children: res.data
+            })
+        }).catch(err => console.log(err))
+    }
+
     render(){
+        const mappedChildren = this.state.children.map( child => {
+            return <Editor 
+            key={child.id} 
+            child={child}
+            deleteChild={this.deleteChild}/>
+        })
         return <div className="main">
             <Form addChild={this.addChild}/>
+            <div>{mappedChildren}</div>
         </div>
     }
 }

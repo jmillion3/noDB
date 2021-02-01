@@ -53,7 +53,13 @@
 	font-family: 'Courier New', Courier, monospace;
 }
 
-/* * FORM * */
+/* ! MAIN ! */
+.main {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* ! FORM ! */
 .form-container {
 	width: 20vw;
 	height: 90vh;
@@ -69,4 +75,20 @@ form input,
 button {
 	margin: 10px;
 	padding: 10px;
+}
+
+/* ! EDITOR ! */
+.editor {
+	width: 80vw;
+	height: 10vh;
+	background-color: grey;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.editor div {
+	font-size: 2em;
+	font-weight: 700;
+	font-family: 'Courier New', Courier, monospace;
 }

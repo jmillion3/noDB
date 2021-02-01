@@ -38,7 +38,8 @@ class Form extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        this.props.addChild(this.state.task);
+        const {name, day, hours} = this.state
+        this.props.addChild(name, day, hours);
         this.setState({
             name: '',
             day: '',
