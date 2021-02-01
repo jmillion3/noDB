@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return <header className="header">
         <div>
-            Screen Time
+            <h1>Screen Time</h1>
         </div>
     </header>
 }
