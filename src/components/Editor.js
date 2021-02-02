@@ -1,14 +1,15 @@
 import React from 'react';
 
 const Editor = props => {
+    const {id, name, day, hours} = props.child
     return <div className="editor">
-        <div>{props.child.name}</div>
-        <div>{props.child.day}</div>
-        <div>{props.child.hours}</div>
+        <div>{name}</div>
+        <div>{day}</div>
+        <div>{hours}</div>
         <div className="buttons">
-            <button className="addBtn" onClick={() => props.updateChild(props.child.id)}> + </button>
-            <button className="subBtn" onClick={() => props.updateChild(props.child.id)}> - </button>
-            <button onClick={() => props.deleteChild(props.child.id)}>Delete</button>
+            <button className="addBtn" onClick={() => props.updateChild(id)}> + </button>
+            <button className="subBtn" onClick={() => props.updateChild(id)}> - </button>
+            <button onClick={() => props.deleteChild(id)}>Delete</button>
         </div>
     </div>
 }

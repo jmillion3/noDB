@@ -56,6 +56,7 @@ class Main extends Component {
             return <Editor 
             key={child.id} 
             child={child}
+            updateChild={this.updateChild}
             deleteChild={this.deleteChild}/>
         })
         return <div className="main">
