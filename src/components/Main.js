@@ -33,8 +33,17 @@ class Main extends Component {
         }).catch(err => console.log(err))
     }
 
-    updateChild = id => {
-        axios.put(`/api/children/${id}`)
+    addHours = (hours, id) => {
+        axios.put(`/api/children/${id}`, {hours: hours + 1})
+        .then(res => {
+            this.setState({
+                children: res.data
+            })
+        }).catch(err => console.log(err))
+    }
+
+    subHours = (hours, id) => {
+        axios.put(`/api/children/${id}`, {hours: hours - 1})
         .then(res => {
             this.setState({
                 children: res.data
@@ -56,7 +65,8 @@ class Main extends Component {
             return <Editor 
             key={child.id} 
             child={child}
-            updateChild={this.updateChild}
+            addHours={this.addHours}
+            subHours={this.subHours}
             deleteChild={this.deleteChild}/>
         })
         return <div className="main">

@@ -7,8 +7,10 @@ const Editor = props => {
         <div>{day}</div>
         <div>{hours}</div>
         <div className="buttons">
-            <button className="addBtn" onClick={() => props.updateChild(id)}> + </button>
-            <button className="subBtn" onClick={() => props.updateChild(id)}> - </button>
+            {/* <button className="addBtn" onClick={() => props.updateChild(id)}> + </button>
+            <button className="subBtn" onClick={() => props.updateChild(id)}> - </button> */}
+            <button className="addBtn" onClick={() => props.addHours(hours, id)}> + </button>
+            <button className="subBtn" onClick={() => props.subHours(hours, id)}> - </button>
             <button onClick={() => props.deleteChild(id)}>Delete</button>
         </div>
     </div>

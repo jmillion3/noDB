@@ -10,14 +10,6 @@ class Form extends Component {
         }
     }
 
-    // handleChange = e => {
-    //     this.setState({
-    //         name: e.target.value,
-    //         day: e.target.value,
-    //         hours: e.target.value
-    //     })
-    // }
-
     handleNameChange = e => {
         this.setState({
             name: e.target.value
@@ -64,7 +56,7 @@ class Form extends Component {
                 onChange={e => this.handleHoursChange(e)}
                 value={this.state.hours}
                 placeholder="Hours"
-                type="text" />
+                type="number" />
                 <button type="submit">ADD</button>
             </form>
         </div>

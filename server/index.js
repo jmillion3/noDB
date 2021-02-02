@@ -9,7 +9,8 @@ app.use(express.json());
 
 app.get('/api/children', ctrl.getChildren);
 app.post('/api/children', ctrl.addChild);
-app.put('/api/children/:id', ctrl.updateChild);
+app.put('/api/children/:id', ctrl.addHours);
+app.put('/api/children/:id', ctrl.subHours);
 app.delete('/api/children/:id', ctrl.deleteChild);
 
 const port = 4003;

@@ -40,14 +40,14 @@
 /* ! HEADER ! */
 .header {
 	height: 10vh;
-	background-color: #282c34;
+	background-color: rgb(0, 0, 0);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .header h1 {
-	color: rgba(240, 240, 240, 100);
+	color: rgb(240, 240, 240, 100);
 	font-size: 3em;
 	font-weight: 900;
 	font-family: 'Courier New', Courier, monospace;
@@ -57,13 +57,14 @@
 .main {
 	display: flex;
 	justify-content: space-between;
+	background: url(https://images.unsplash.com/photo-1581913524557-128eedd5871a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2380&q=80);
 }
 
 /* ! FORM ! */
 .form-container {
 	width: 20vw;
 	height: 90vh;
-	background-color: rgb(0, 0, 0);
+	background-color: rgba(172, 14, 40, .3);
 }
 form {
 	display: flex;
@@ -81,7 +82,7 @@ button {
 .editor {
 	width: 80vw;
 	height: 10vh;
-	background-color: grey;
+	background-color: rgba(161, 174, 37, .3);
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -91,6 +92,7 @@ button {
 	font-size: 2em;
 	font-weight: 700;
 	font-family: 'Courier New', Courier, monospace;
+	width: 10%;
 }
 
 button:hover {

@@ -16,12 +16,18 @@ module.exports = {
     },
     addChild: (req, res) => {
         const {name, day, hours} = req.body;
-        const newChild = {id, name, day, hours};
+        const newChild = {id, name, day, hours: +hours};
         children.push(newChild);
         id++;
         res.status(200).send(children);
     },
-    updateChild: (req, res) => {
+    addHours: (req, res) => {
+        const {hours} = req.body;
+        const index = children.findIndex(child => child.id === +req.params.id);
+        children[index].hours = hours
+        res.status(200).send(children)
+    },
+    subHours: (req, res) => {
         const {hours} = req.body;
         const index = children.findIndex(child => child.id === +req.params.id);
         children[index].hours = hours
