@@ -50,7 +50,7 @@
 	color: rgb(240, 240, 240, 100);
 	font-size: 3em;
 	font-weight: 900;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Titillium Web', sans-serif;
 }
 
 /* ! MAIN ! */
@@ -88,6 +88,7 @@ form button {
 	width: 80vw;
 	height: 10vh;
 	background-color: rgba(161, 174, 37, .3);
+	border: 1px solid white;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -96,7 +97,7 @@ form button {
 .editor div {
 	font-size: 2em;
 	font-weight: 700;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Titillium Web', sans-serif;
 	width: 20%;
 }
 
